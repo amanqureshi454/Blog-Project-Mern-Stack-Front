@@ -21,8 +21,7 @@ const BlogDetail = () => {
       try {
         // GET POST BY ID
         const response =
-          await fetch(`https://blog-project-mern-stack-2.onrender.com
-/getPost/${id}`);
+          await fetch(`https://blog-project-mern-stack.onrender.com/getPost/${id}`);
         const responseData = await response.json();
         if (response.ok) {
           setPost(responseData.data);
@@ -32,8 +31,7 @@ const BlogDetail = () => {
         }
 
         const userResponse = await fetch(
-          `https://blog-project-mern-stack-2.onrender.com
-/getUser`,
+          `https://blog-project-mern-stack.onrender.com/getUser`,
           {
             method: "GET",
             headers: {
@@ -58,8 +56,7 @@ const BlogDetail = () => {
 
     try {
       const commentSend = await fetch(
-        `https://blog-project-mern-stack-2.onrender.com
-/postComment/${id}`,
+        `https://blog-project-mern-stack.onrender.com/postComment/${id}`,
         {
           method: "POST",
           headers: {

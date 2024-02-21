@@ -13,8 +13,7 @@ const CommentUser = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const commentRes = await fetch(`https://blog-project-mern-stack-2.onrender.com
-/getComment`, {
+        const commentRes = await fetch(`https://blog-project-mern-stack.onrender.com/getComment`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
