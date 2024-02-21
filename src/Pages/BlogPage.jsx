@@ -17,7 +17,8 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${process.env.BACKEND_DB_URL}/getAllPost`);
+        const response = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+/getAllPost`);
         const responseData = await response.json();
 
         if (
@@ -69,7 +70,8 @@ const BlogPage = () => {
                         <img
                           alt="Placeholder"
                           className="block h-64 w-full"
-                          src={`${process.env.BACKEND_DB_URL}/${post.file}`}
+                          src={`https://blog-project-mern-stack-2.onrender.com/
+/${post.file}`}
                         />
                       </Link>
                       <header className="flex items-center justify-between leading-tight p-2 md:p-4">

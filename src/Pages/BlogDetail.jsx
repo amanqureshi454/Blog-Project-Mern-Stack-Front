@@ -20,7 +20,9 @@ const BlogDetail = () => {
     const fetchData = async () => {
       try {
         // GET POST BY ID
-        const response = await fetch(`${process.env.BACKEND_DB_URL}/getPost/${id}`);
+        const response =
+          await fetch(`https://blog-project-mern-stack-2.onrender.com/
+/getPost/${id}`);
         const responseData = await response.json();
         if (response.ok) {
           setPost(responseData.data);
@@ -29,13 +31,17 @@ const BlogDetail = () => {
           // console.log(responseData.data);
         }
 
-        const userResponse = await fetch(`${process.env.BACKEND_DB_URL}/getUser`, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`, // Include the token in the 'Authorization' header
-          },
-        });
+        const userResponse = await fetch(
+          `https://blog-project-mern-stack-2.onrender.com/
+/getUser`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`, // Include the token in the 'Authorization' header
+            },
+          }
+        );
         const getUserData = await userResponse.json();
         setUser(getUserData.data);
         // console.log(getUserData);
@@ -51,9 +57,9 @@ const BlogDetail = () => {
     e.preventDefault();
 
     try {
-     
       const commentSend = await fetch(
-        `${process.env.BACKEND_DB_URL}/postComment/${id}`,
+        `https://blog-project-mern-stack-2.onrender.com/
+/postComment/${id}`,
         {
           method: "POST",
           headers: {
@@ -150,7 +156,8 @@ const BlogDetail = () => {
               <div className="img w-full mt-5">
                 <img
                   className="lg:h-[300px] sm:h-80 w-full object-cover"
-                  src={`${process.env.BACKEND_DB_URL}/${post.file}`}
+                  src={`https://blog-project-mern-stack-2.onrender.com/
+/${post.file}`}
                   alt=""
                 />
               </div>

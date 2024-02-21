@@ -14,7 +14,8 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await fetch(`${process.env.BACKEND_DB_URL}/register`, {
+      const res = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

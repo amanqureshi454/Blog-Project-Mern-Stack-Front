@@ -33,7 +33,8 @@ const CreatePost = () => {
       data.append("file", postInfo.file);
       data.append("description", postInfo.description);
 
-      const sendingPost = await fetch(`${process.env.BACKEND_DB_URL}/createpost`, {
+      const sendingPost = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+/createpost`, {
         method: "POST",
         body: data,
         headers: {

@@ -13,7 +13,8 @@ const CommentUser = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const commentRes = await fetch(`${process.env.BACKEND_DB_URL}/getComment`, {
+        const commentRes = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+/getComment`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

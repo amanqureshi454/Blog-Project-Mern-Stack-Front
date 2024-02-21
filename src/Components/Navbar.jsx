@@ -17,7 +17,8 @@ const Navbar = () => {
   const isAuthenticated = !!token;
   useEffect(() => {
     const fetchUser = async () => {
-      const userResponse = await fetch(`${process.env.BACKEND_DB_URL}/getUser`, {
+      const userResponse = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+/getUser`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

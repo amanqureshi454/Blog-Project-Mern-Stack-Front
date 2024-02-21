@@ -15,7 +15,8 @@ const PostUser = () => {
     const fetchPostbyUserId = async () => {
       try {
         const postResponse = await fetch(
-          `${process.env.BACKEND_DB_URL}/getPostbyUserId`,
+          `https://blog-project-mern-stack-2.onrender.com/
+/getPostbyUserId`,
           {
             method: "GET",
             headers: {
@@ -51,7 +52,8 @@ const PostUser = () => {
     if (result.isConfirmed) {
       try {
         // Make DELETE request to delete the post
-        const response = await fetch(`${process.env.BACKEND_DB_URL}/posts/${postId}`, {
+        const response = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+/posts/${postId}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -124,7 +126,8 @@ const PostUser = () => {
         >
           <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
             <img
-              src={`${process.env.BACKEND_DB_URL}/${post.file}`}
+              src={`https://blog-project-mern-stack-2.onrender.com/
+/${post.file}`}
               alt=""
               className="self-center flex-shrink-0 w-24 h-24 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700"
             />
