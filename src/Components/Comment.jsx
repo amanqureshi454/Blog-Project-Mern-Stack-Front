@@ -9,15 +9,16 @@ const Comment = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/getComment/${id}`);
+        const response = await fetch(`${process.env.BACKEND_DB_URL}/getComment/${id}`);
         if (!response.ok) {
-          throw new Error("Failed to fetch comments");
+          throw new Error(
+            `Failed to fetch comments: ${response.status} ${response.statusText}`
+          );
         }
         const data = await response.json();
-        // console.log("Fetched comments:", data);
         setComments(data.comments || []);
       } catch (error) {
-        console.error("Error fetching comments:", error);
+        console.error("Error fetching comments:", error.message);
       }
     };
 

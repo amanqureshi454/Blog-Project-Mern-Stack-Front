@@ -14,7 +14,7 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await fetch(`http://localhost:4000/register`, {
+      const res = await fetch(`${process.env.BACKEND_DB_URL}/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

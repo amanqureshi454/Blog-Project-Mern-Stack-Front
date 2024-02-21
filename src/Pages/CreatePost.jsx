@@ -33,7 +33,7 @@ const CreatePost = () => {
       data.append("file", postInfo.file);
       data.append("description", postInfo.description);
 
-      const sendingPost = await fetch(`http://localhost:4000/createpost`, {
+      const sendingPost = await fetch(`${process.env.BACKEND_DB_URL}/createpost`, {
         method: "POST",
         body: data,
         headers: {

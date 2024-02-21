@@ -15,7 +15,7 @@ const PostUser = () => {
     const fetchPostbyUserId = async () => {
       try {
         const postResponse = await fetch(
-          `http://localhost:4000/getPostbyUserId`,
+          `${process.env.BACKEND_DB_URL}/getPostbyUserId`,
           {
             method: "GET",
             headers: {
@@ -51,7 +51,7 @@ const PostUser = () => {
     if (result.isConfirmed) {
       try {
         // Make DELETE request to delete the post
-        const response = await fetch(`http://localhost:4000/posts/${postId}`, {
+        const response = await fetch(`${process.env.BACKEND_DB_URL}/posts/${postId}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -124,7 +124,7 @@ const PostUser = () => {
         >
           <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
             <img
-              src={`http://localhost:4000/${post.file}`}
+              src={`${process.env.BACKEND_DB_URL}/${post.file}`}
               alt=""
               className="self-center flex-shrink-0 w-24 h-24 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700"
             />

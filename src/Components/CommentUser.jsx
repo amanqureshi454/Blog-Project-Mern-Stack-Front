@@ -13,7 +13,7 @@ const CommentUser = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const commentRes = await fetch(`http://localhost:4000/getComment`, {
+        const commentRes = await fetch(`${process.env.BACKEND_DB_URL}/getComment`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

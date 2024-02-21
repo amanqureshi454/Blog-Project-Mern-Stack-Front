@@ -20,7 +20,7 @@ const BlogDetail = () => {
     const fetchData = async () => {
       try {
         // GET POST BY ID
-        const response = await fetch(`http://localhost:4000/getPost/${id}`);
+        const response = await fetch(`${process.env.BACKEND_DB_URL}/getPost/${id}`);
         const responseData = await response.json();
         if (response.ok) {
           setPost(responseData.data);
@@ -29,7 +29,7 @@ const BlogDetail = () => {
           // console.log(responseData.data);
         }
 
-        const userResponse = await fetch(`http://localhost:4000/getUser`, {
+        const userResponse = await fetch(`${process.env.BACKEND_DB_URL}/getUser`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const BlogDetail = () => {
     try {
      
       const commentSend = await fetch(
-        `http://localhost:4000/postComment/${id}`,
+        `${process.env.BACKEND_DB_URL}/postComment/${id}`,
         {
           method: "POST",
           headers: {
@@ -150,7 +150,7 @@ const BlogDetail = () => {
               <div className="img w-full mt-5">
                 <img
                   className="lg:h-[300px] sm:h-80 w-full object-cover"
-                  src={`http://localhost:4000/${post.file}`}
+                  src={`${process.env.BACKEND_DB_URL}/${post.file}`}
                   alt=""
                 />
               </div>

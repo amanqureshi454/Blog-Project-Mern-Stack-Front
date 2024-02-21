@@ -29,7 +29,7 @@ const EditPost = () => {
   useEffect(() => {
     const fetchasync = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/getPost/${id}`);
+        const response = await fetch(`${process.env.BACKEND_DB_URL}/getPost/${id}`);
         const responseData = await response.json();
         if (response.ok) {
           setPost(responseData.data);
@@ -55,7 +55,7 @@ const EditPost = () => {
         formData.append("file", file); // Append updated file if selected
       }
 
-      const sendingPost = await fetch(`http://localhost:4000/editPost/${id}`, {
+      const sendingPost = await fetch(`${process.env.BACKEND_DB_URL}/editPost/${id}`, {
         method: "PUT",
         body: formData, // Send form data
       });

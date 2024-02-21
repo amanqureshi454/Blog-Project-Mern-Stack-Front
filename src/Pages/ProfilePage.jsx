@@ -72,7 +72,7 @@ const ProfilePage = () => {
       dataToSend.append("confirmPassword", updatedProfile.confirmPassword);
       console.log("Data to send:", dataToSend);
 
-      const updateReq = await fetch(`http://localhost:4000/profileUpdate`, {
+      const updateReq = await fetch(`${process.env.BACKEND_DB_URL}/profileUpdate`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -123,7 +123,7 @@ const ProfilePage = () => {
       const token = localStorage.getItem("token");
       try {
         // Fetch user data
-        const userResponse = await fetch(`http://localhost:4000/getUser`, {
+        const userResponse = await fetch(`${process.env.BACKEND_DB_URL}/getUser`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

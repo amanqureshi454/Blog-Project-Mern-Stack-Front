@@ -9,7 +9,6 @@ import {
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import logo from "../assets/imgs/X-logo.png";
-// import { isAuthenticated } from "../auth/auth";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -18,11 +17,11 @@ const Navbar = () => {
   const isAuthenticated = !!token;
   useEffect(() => {
     const fetchUser = async () => {
-      const userResponse = await fetch(`http://localhost:4000/getUser`, {
+      const userResponse = await fetch(`${process.env.BACKEND_DB_URL}/getUser`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // Include the token in the 'Authorization' header
+          Authorization: `Bearer ${token}`,
         },
       });
       const getUserData = await userResponse.json();

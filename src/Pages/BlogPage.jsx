@@ -17,7 +17,7 @@ const BlogPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/getAllPost`);
+        const response = await fetch(`${process.env.BACKEND_DB_URL}/getAllPost`);
         const responseData = await response.json();
 
         if (
@@ -69,7 +69,7 @@ const BlogPage = () => {
                         <img
                           alt="Placeholder"
                           className="block h-64 w-full"
-                          src={`http://localhost:4000/${post.file}`}
+                          src={`${process.env.BACKEND_DB_URL}/${post.file}`}
                         />
                       </Link>
                       <header className="flex items-center justify-between leading-tight p-2 md:p-4">
