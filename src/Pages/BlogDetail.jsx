@@ -153,8 +153,7 @@ const BlogDetail = () => {
               <div className="img w-full mt-5">
                 <img
                   className="lg:h-[300px] sm:h-80 w-full object-cover"
-                  src={`https://blog-project-mern-stack-2.onrender.com/
-/${post.file}`}
+                  src={`https://blog-project-mern-stack-2.onrender.com/${post.file}`}
                   alt=""
                 />
               </div>
