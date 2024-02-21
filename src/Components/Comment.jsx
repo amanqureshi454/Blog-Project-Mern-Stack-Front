@@ -9,7 +9,7 @@ const Comment = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+        const response = await fetch(`https://blog-project-mern-stack-2.onrender.com
 /getComment/${id}`);
         if (!response.ok) {
           throw new Error(

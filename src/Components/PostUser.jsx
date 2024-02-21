@@ -15,7 +15,7 @@ const PostUser = () => {
     const fetchPostbyUserId = async () => {
       try {
         const postResponse = await fetch(
-          `https://blog-project-mern-stack-2.onrender.com/
+          `https://blog-project-mern-stack-2.onrender.com
 /getPostbyUserId`,
           {
             method: "GET",
@@ -52,7 +52,7 @@ const PostUser = () => {
     if (result.isConfirmed) {
       try {
         // Make DELETE request to delete the post
-        const response = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+        const response = await fetch(`https://blog-project-mern-stack-2.onrender.com
 /posts/${postId}`, {
           method: "DELETE",
           headers: {

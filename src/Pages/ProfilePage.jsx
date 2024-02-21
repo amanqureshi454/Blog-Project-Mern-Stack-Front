@@ -72,7 +72,7 @@ const ProfilePage = () => {
       dataToSend.append("confirmPassword", updatedProfile.confirmPassword);
       console.log("Data to send:", dataToSend);
 
-      const updateReq = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+      const updateReq = await fetch(`https://blog-project-mern-stack-2.onrender.com
 /profileUpdate`, {
         method: "PUT",
         headers: {
@@ -124,7 +124,7 @@ const ProfilePage = () => {
       const token = localStorage.getItem("token");
       try {
         // Fetch user data
-        const userResponse = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+        const userResponse = await fetch(`https://blog-project-mern-stack-2.onrender.com
 /getUser`, {
           method: "GET",
           headers: {

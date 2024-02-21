@@ -33,7 +33,7 @@ const CreatePost = () => {
       data.append("file", postInfo.file);
       data.append("description", postInfo.description);
 
-      const sendingPost = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+      const sendingPost = await fetch(`https://blog-project-mern-stack-2.onrender.com
 /createpost`, {
         method: "POST",
         body: data,

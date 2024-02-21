@@ -15,7 +15,7 @@ const Signin = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await fetch(`https://blog-project-mern-stack-2.onrender.com/
+      const res = await fetch(`https://blog-project-mern-stack-2.onrender.com
 /login`, {
         method: "POST",
         headers: {
