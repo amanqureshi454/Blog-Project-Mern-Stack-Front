@@ -153,7 +153,7 @@ const BlogDetail = () => {
               <div className="img w-full mt-5">
                 <img
                   className="lg:h-[300px] sm:h-80 w-full object-cover"
-                  src={`https://blog-project-mern-stack-2.onrender.com/${post.file}`}
+                  src={`https://blog-project-mern-stack.onrender.com/${post.file}`}
                   alt=""
                 />
               </div>
@@ -175,7 +175,7 @@ const BlogDetail = () => {
                     <p className="ml-2 lg:text-lg font-semibold text:md">
                       Publish at {""}
                       <span className="text-grey-darker lg:text-lg text:md ">
-                        {finalFormattedDate}
+                        {formattedDate}
                       </span>
                     </p>
                   </div>
